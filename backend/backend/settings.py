@@ -14,7 +14,11 @@ SECRET_KEY = "django-insecure-schemefinder-dev-key-change-in-production"
 # SECURITY WARNING: don't run with debug turned on in production.
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "schemefinder-backend.onrender.com",
+]
 
 # Application definition
 INSTALLED_APPS = [
