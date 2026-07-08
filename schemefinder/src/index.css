@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fbf9f5;
+  color: #13101e;
+}
+
+::selection {
+  background-color: #d9ccfb;
+  color: #3a1876;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d9ccfb;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bca3f6;
+}
+
+*:focus-visible {
+  outline: 2px solid #7c4de3;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-violet-600 px-6 py-3 font-display font-semibold text-white shadow-card transition-all duration-300 hover:bg-violet-700 hover:shadow-glow hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-violet-200 bg-white px-6 py-3 font-display font-semibold text-ink transition-all duration-300 hover:border-violet-400 hover:bg-violet-50 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 font-display text-sm font-medium text-ink/70 transition-colors hover:bg-violet-50 hover:text-violet-700;
+  }
+
+  .card-surface {
+    @apply rounded-xl2 border border-violet-100 bg-white shadow-card transition-all duration-300;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50 px-4 py-1.5 font-display text-xs font-semibold uppercase tracking-wider text-violet-700;
+  }
+
+  .tricolor-rule {
+    @apply h-[3px] w-14 rounded-full bg-tricolor;
+  }
+
+  .section-heading {
+    @apply font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl;
+  }
+
+  .glass-panel {
+    @apply border border-white/20 bg-white/70 backdrop-blur-xl;
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-violet-100 bg-white px-4 py-3 font-body text-sm text-ink placeholder:text-ink/35 transition-colors focus:border-violet-400 focus:outline-none focus:ring-4 focus:ring-violet-100;
+  }
+
+  .label-field {
+    @apply mb-1.5 block font-display text-sm font-medium text-ink/80;
+  }
+}
